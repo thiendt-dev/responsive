@@ -1,0 +1,95 @@
+@media screen and (max-width: 992px) {
+  .header {
+    margin-bottom: 120px;
+  }
+
+  .menu {
+    .btnOpen {
+      display: block;
+      cursor: pointer;
+      margin: auto 10px;
+      padding: 10px;
+      font-size: 24px;
+    }
+
+    &__left {
+      position: fixed;
+      z-index: 999;
+      background-color: $whitesmoke;
+      top: 0;
+      width: 300px;
+      height: 100%;
+      left: -300px;
+      transition: 0.3s ease;
+      overflow: auto;
+
+      &--show {
+        left: 0;
+        opacity: 1;
+      }
+    }
+
+    .nav {
+      &__item {
+        display: block;
+
+        &--close {
+          display: block;
+          position: absolute;
+          right: 15px;
+        }
+      }
+
+      &__child {
+        position: relative;
+        opacity: 1;
+        text-align: left;
+        background-color: $whitesmoke;
+        border: 0;
+        box-shadow: none;
+        transition: none;
+        transform: none;
+      }
+    }
+
+    .social {
+      margin-left: auto;
+    }
+
+    &__right {
+      .social-button {
+        display: block;
+        cursor: pointer;
+        margin: auto 10px;
+        padding: 10px;
+        font-size: 24px;
+        outline: 0;
+      }
+
+      .social {
+        position: absolute;
+        opacity: 0;
+        transform: translateY(50%);
+        padding: 5px 20px;
+
+        &__item {
+          display: block;
+          padding: 0;
+        }
+      }
+
+      .show {
+        opacity: 1;
+        transform: translateY(0%);
+
+        transition: 0.3s ease;
+        z-index: 1;
+      }
+    }
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+}
